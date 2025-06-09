@@ -7,7 +7,7 @@ const crypto = require('crypto'); // Replaced shortid
 const app = express();
 
 // Connect to MongoDB
-mongoose.connect(process.env.MONGODB_URI || 'mongodb+srv://empirepayvtu:empirevtu1@empirepayvtu.mygpq.mongodb.net/?retryWrites=true&w=majority&appName=empirepayvtu', {
+mongoose.connect(process.env.MONGODB_URI || 'mongodb+srv://empirepayvtu:9yhXbfcxrXexv0bZ@empirefree.jxrcgdm.mongodb.net/?retryWrites=true&w=majority&appName=empirefree', {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
