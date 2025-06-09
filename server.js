@@ -30,6 +30,14 @@ const Session = mongoose.model('Session', new mongoose.Schema({
 // Telegram bot
 const bot = new Telegraf(process.env.TELEGRAM_BOT_TOKEN);
 
+// Add this after all your API routes but before static files middleware
+app.get('/session/:id', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
+
+// This should come after the session route handler
+app.use(express.static(path.join(__dirname, 'public')));
+
 // Middleware
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
